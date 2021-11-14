@@ -1,0 +1,37 @@
+{
+  "name": "graphql-mongodb",
+  "version": "1.0.0",
+  "description": "GraphQL API using MongoDB",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "concurrently \"tsc -w\" \"nodemon dist/index.js \""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romanrguez192/graphql-mongodb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romanrguez192/graphql-mongodb/issues"
+  },
+  "homepage": "https://github.com/romanrguez192/graphql-mongodb#readme",
+  "dependencies": {
+    "apollo-server-core": "^3.5.0",
+    "apollo-server-express": "^3.5.0",
+    "express": "^4.17.1",
+    "graphql": "^16.0.1",
+    "mongoose": "^6.0.12"
+  },
+  "devDependencies": {
+    "@types/concurrently": "^6.3.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.11.7",
+    "@types/nodemon": "^1.19.1",
+    "concurrently": "^6.4.0",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.4.4"
+  }
+}

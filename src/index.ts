@@ -3,6 +3,7 @@ import { ApolloServerPluginDrainHttpServer } from "apollo-server-core";
 import express from "express";
 import http from "http";
 
+import { connect } from "./db";
 import { typeDefs, resolvers } from "./schema";
 
 const startApolloServer = async () => {
@@ -14,6 +15,8 @@ const startApolloServer = async () => {
     resolvers,
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
   });
+
+  await connect();
 
   await server.start();
   server.applyMiddleware({ app });
